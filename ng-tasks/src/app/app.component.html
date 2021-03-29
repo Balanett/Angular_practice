@@ -1,0 +1,11 @@
+<ng-template #showMessageTpl>
+  <p [style.background]="textAlign"> {{ showMsgText | json }} </p>
+</ng-template>
+
+<ng-template #showErrorTpl>
+  <p [style.background]="textAlign"> {{ showErrorText | json }} </p>
+</ng-template>
+
+<div *ngIf="showMsg == true then showMessageTpl; else showErrorTpl"> </div>
+
+
