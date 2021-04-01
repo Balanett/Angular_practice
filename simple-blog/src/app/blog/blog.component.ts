@@ -7,19 +7,14 @@ import {Post} from '../app.component';
   template: `
 
     <div class = 'grid-container'>
-      <mat-card class="mat-card" *ngFor="let post of posts" [id]="post.id">
-        <img src="{{post.postImg}}" alt="PostIMG">
-        <mat-card-title>{{post.title}}</mat-card-title>
-        <mat-card-content>
-          <p>{{post.body}}</p>
-        </mat-card-content>
-        <a mat-button href="#">Read more</a>
-      </mat-card>
+        <app-post-item [post]="post" *ngFor="let post of posts" [id]="post.id"></app-post-item>
     </div>
   `,
   styleUrls: ['blog.component.css']
 })
 export class BlogComponent implements OnInit {
+
+  imgLink = 'https://picsum.photos/400/200';
 
   @Input()
   posts: Post[] = [];
