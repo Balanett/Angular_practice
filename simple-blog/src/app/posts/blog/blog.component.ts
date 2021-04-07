@@ -5,7 +5,6 @@ import {Post} from '../../app.component';
 @Component({
   selector: 'app-blog',
   template: `
-
     <div class = 'grid-container'>
         <app-post-item [post]="post" *ngFor="let post of posts" [id]="post.id"></app-post-item>
     </div>

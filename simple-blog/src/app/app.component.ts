@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { PostsService } from './posts.service';
 
 export interface Post {
@@ -10,13 +10,21 @@ export interface Post {
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  template: `
+    <app-header></app-header>
+    <app-blog [posts]="posts"></app-blog>
+  `,
   styleUrls: ['app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'simple-blog';
+  posts: Post[];
 
   constructor(private postsService: PostsService) {
-    console.log(this.postsService.getPosts());
+    this.posts = [];
+  }
+
+  ngOnInit(): void {
+    this.posts = this.postsService.getPosts();
   }
 }

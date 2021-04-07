@@ -26,7 +26,8 @@ export class PostsService {
 
   constructor() { }
 
-  getPosts(): Post {
-    return this.getPosts();
+  getPosts(): Post[] {
+    console.log(this.posts);
+    return this.posts;
   }
 }
