@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PostsService } from './posts.service';
 
 export interface Post {
   id: number;
@@ -9,30 +10,13 @@ export interface Post {
 
 @Component({
   selector: 'app-root',
-  template: `
-    <app-header></app-header>
-    <app-blog [posts]="posts"></app-blog>
-  `,
+  templateUrl: './app.component.html',
   styleUrls: ['app.component.css']
 })
 export class AppComponent {
   title = 'simple-blog';
 
-  posts: Post[] = [
-    {
-      id: 1,
-      title: 'Lorem ipsum',
-      body: 'This is the body of a post.'
-    },
-    {
-      id: 2,
-      title: 'Lorem ipsum',
-      body: 'This is the body of a post.'
-    },
-    {
-      id: 3,
-      title: 'Lorem ipsum',
-      body: 'This is the body of a post.'
-    }
-  ];
+  constructor(private postsService: PostsService) {
+    console.log(this.postsService.getPosts());
+  }
 }
