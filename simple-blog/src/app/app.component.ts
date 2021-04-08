@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import { PostsService } from './posts.service';
 
 export interface Post {
+  userId: number;
   id: number;
   title: string;
   body: string;
@@ -18,13 +19,14 @@ export interface Post {
 })
 export class AppComponent implements OnInit {
   title = 'simple-blog';
-  posts: Post[];
+  posts: Post[] | undefined;
 
   constructor(private postsService: PostsService) {
-    this.posts = [];
   }
 
   ngOnInit(): void {
-    this.posts = this.postsService.getPosts();
+    this.postsService.getPosts().subscribe(posts => {
+      this.posts = posts;
+    });
   }
 }

@@ -16,7 +16,7 @@ export class BlogComponent implements OnInit {
   imgLink = 'https://picsum.photos/400/200';
 
   @Input()
-  posts: Post[] = [];
+  posts: Post[] | undefined = [];
 
   constructor() { }
 

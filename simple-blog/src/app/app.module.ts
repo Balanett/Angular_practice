@@ -4,7 +4,8 @@ import { AppComponent } from './app.component';
 import { PostsService } from './posts.service';
 import {HeaderComponent} from './header/header.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import {PostsModule} from "./posts/posts.module";
+import {PostsModule} from './posts/posts.module';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import {PostsModule} from "./posts/posts.module";
     BrowserModule,
     MatToolbarModule,
     PostsModule,
+    HttpClientModule
   ],
   providers: [PostsService],
   bootstrap: [AppComponent]

@@ -1,33 +1,19 @@
 import { Injectable } from '@angular/core';
 import {Post} from './app.component';
+import {Observable} from 'rxjs';
+import {HttpClient} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PostsService {
 
-  posts: Post[] = [
-    {
-      id: 1,
-      title: 'Lorem ipsum',
-      body: 'This is the body of a post.'
-    },
-    {
-      id: 2,
-      title: 'Lorem ipsum',
-      body: 'This is the body of a post.'
-    },
-    {
-      id: 3,
-      title: 'Lorem ipsum',
-      body: 'This is the body of a post.'
-    }
-  ];
+  static readonly API_URL = `http://localhost:3000/posts`;
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  getPosts(): Post[] {
-    console.log(this.posts);
-    return this.posts;
+  getPosts(): Observable<Post[]> {
+    return this.http.get<Post[]>(PostsService.API_URL);
   }
+
 }
