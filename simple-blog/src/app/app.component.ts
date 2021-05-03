@@ -14,6 +14,7 @@ export interface Post {
   template: `
     <app-header></app-header>
     <app-blog [posts]="posts"></app-blog>
+    <router-outlet></router-outlet>
   `,
   styleUrls: ['app.component.css']
 })
@@ -27,6 +28,10 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.postsService.getPosts().subscribe(posts => {
       this.posts = posts;
+    });
+
+    this.postsService.getPost(12).subscribe(posts => {
+      console.log('post by id (12):', posts);
     });
   }
 }
