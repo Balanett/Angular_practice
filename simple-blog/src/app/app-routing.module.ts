@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
-import {AppComponent} from './app.component';
 import {PostDetailComponent} from './post-detail/post-detail.component';
 import {NotFoundComponent} from './not-found/not-found.component';
+import {BlogComponent} from './posts/blog/blog.component';
 
 const routes: Routes = [
-  {path: '', component: AppComponent },
+  {path: '', component: BlogComponent },
   {path: 'post', component: PostDetailComponent},
   {path: '404', component: NotFoundComponent},
   {path: '**', redirectTo: '404'}

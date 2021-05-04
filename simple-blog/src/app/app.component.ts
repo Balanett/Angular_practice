@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import { PostsService } from './posts.service';
 
 export interface Post {
   userId: number;
@@ -13,25 +12,10 @@ export interface Post {
   selector: 'app-root',
   template: `
     <app-header></app-header>
-    <app-blog [posts]="posts"></app-blog>
     <router-outlet></router-outlet>
   `,
   styleUrls: ['app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'simple-blog';
-  posts: Post[] | undefined;
-
-  constructor(private postsService: PostsService) {
-  }
-
-  ngOnInit(): void {
-    this.postsService.getPosts().subscribe(posts => {
-      this.posts = posts;
-    });
-
-    this.postsService.getPost(12).subscribe(posts => {
-      console.log('post by id (12):', posts);
-    });
-  }
 }

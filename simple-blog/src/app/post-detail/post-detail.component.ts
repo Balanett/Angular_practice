@@ -4,11 +4,7 @@ import { Post } from '../app.component';
 @Component({
   selector: 'app-post-detail',
   template: `
-    <mat-card [id]="post.id" *ngIf="post">
-      <mat-card-title> {{post.title}} </mat-card-title>
-      <mat-card-content> {{post.body}} </mat-card-content>
-      <a routerLink="/post"> Read more </a>
-    </mat-card>
+    <h1>Nem inputon keresztül érkezik a post, le kell kérni az útvonalból az id-t. - post service használata</h1>
   `,
   styleUrls: ['./post-detail.component.css']
 })
