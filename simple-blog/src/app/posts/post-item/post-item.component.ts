@@ -4,7 +4,7 @@ import { Post } from '../../app.component';
 @Component({
   selector: 'app-post-item',
   template: `
-    <mat-card [id]="post.id" *ngIf="post">
+    <mat-card class="flex-container" [id]="post.id" *ngIf="post">
       <img [src]="imgLink" alt="Pics">
       <mat-card-title> {{post.title}} </mat-card-title>
       <mat-card-content> {{post.body}} </mat-card-content>

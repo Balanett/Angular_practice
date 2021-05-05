@@ -1,0 +1,12 @@
+mat-card {
+  height: 350px;
+}
+
+mat-card-title {
+  padding-top: 12px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}

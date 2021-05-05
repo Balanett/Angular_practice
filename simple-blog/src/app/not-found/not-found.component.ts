@@ -3,8 +3,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-not-found',
   template: `
-    <h1>404</h1>
-    <h1>Page not found</h1>
+    <div class="notFound">
+      <h1>404</h1>
+      <h2>Page not found</h2>
+    </div>
   `,
   styleUrls: ['./not-found.component.css']
 })
