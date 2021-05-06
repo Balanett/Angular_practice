@@ -11,7 +11,7 @@ import {PostsService} from '../../posts.service';
         <app-post-item [post]="post" *ngFor="let post of posts" [id]="post.id"></app-post-item>
       </ng-template>
 
-      <ng-template #unsuccessTpl >Test - no items yet.</ng-template>
+      <ng-template #unsuccessTpl >Error message: No items.</ng-template>
 
       <div class = 'grid-container' *ngIf="posts?.length then successTpl; else unsuccessTpl"> </div>
     </div>
@@ -31,9 +31,11 @@ export class BlogComponent implements OnInit {
       this.posts = posts;
     });
 
-    this.postsService.getPost(12).subscribe(posts => {
+   /*
+   this.postsService.getPost(12).subscribe(posts => {
       console.log('post by id (12):', posts);
     });
+    */
   }
 
 }

@@ -7,7 +7,7 @@ import {BlogComponent} from './posts/blog/blog.component';
 
 const routes: Routes = [
   {path: '', component: BlogComponent },
-  {path: 'post', component: PostDetailComponent},
+  {path: 'posts/:id', component: PostDetailComponent},
   {path: '404', component: NotFoundComponent},
   {path: '**', redirectTo: '404'}
 ];

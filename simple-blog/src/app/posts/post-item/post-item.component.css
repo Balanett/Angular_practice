@@ -4,9 +4,23 @@ mat-card {
 
 mat-card-title {
   padding-top: 12px;
+  text-align: center;
+}
+
+mat-card-content {
+  text-align: justify;
 }
 
 .flex-container {
   display: flex;
   flex-direction: column;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: deeppink;
 }

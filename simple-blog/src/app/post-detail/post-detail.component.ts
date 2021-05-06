@@ -1,20 +1,20 @@
 import {Component, Input, OnInit} from '@angular/core';
-import { Post } from '../app.component';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-post-detail',
   template: `
-    <h1>Nem inputon keresztül érkezik a post, le kell kérni az útvonalból az id-t. - post service használata</h1>
+    <h1>Template Post</h1>
   `,
   styleUrls: ['./post-detail.component.css']
 })
 export class PostDetailComponent implements OnInit {
 
-  @Input() post: Post | undefined;
-
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    const id = this.route.snapshot.paramMap.get('id');
+    const POST_URL = `http://localhost:3000/posts` + `/${(id)}`;
+    console.log('post URL:', POST_URL);
   }
-
 }

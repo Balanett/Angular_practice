@@ -8,7 +8,7 @@ import { Post } from '../../app.component';
       <img [src]="imgLink" alt="Pics">
       <mat-card-title> {{post.title}} </mat-card-title>
       <mat-card-content> {{post.body}} </mat-card-content>
-      <a routerLink="/post"> Read more </a>
+      <a [routerLink]="['/posts', post.id]" routerLinkActive="active"> Read more </a>
     </mat-card>
   `,
   styleUrls: ['./post-item.component.css']

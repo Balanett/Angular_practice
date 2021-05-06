@@ -18,8 +18,9 @@ export class PostsService {
     });
   }
 
+  /*
   getPost(id: number): Observable<Post[]> {
     return this.http.get<Post[]>(PostsService.API_URL + `/${id}`);
   }
-
+   */
 }
