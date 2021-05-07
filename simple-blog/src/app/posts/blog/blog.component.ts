@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Post} from '../../app.component';
 import {PostsService} from '../../posts.service';
 
@@ -20,7 +20,6 @@ import {PostsService} from '../../posts.service';
 })
 export class BlogComponent implements OnInit {
 
-  imgLink = 'https://picsum.photos/400/200';
   posts: Post[] | undefined = [];
 
   constructor(private postsService: PostsService) {
@@ -31,11 +30,8 @@ export class BlogComponent implements OnInit {
       this.posts = posts;
     });
 
-   /*
-   this.postsService.getPost(12).subscribe(posts => {
-      console.log('post by id (12):', posts);
+    this.postsService.getPost(12).subscribe(posts => {
+      console.log('getPost by id (12):', posts);
     });
-    */
   }
-
 }

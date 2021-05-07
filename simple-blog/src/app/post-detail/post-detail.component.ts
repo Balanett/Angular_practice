@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 
 @Component({
@@ -15,6 +15,9 @@ export class PostDetailComponent implements OnInit {
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
     const POST_URL = `http://localhost:3000/posts` + `/${(id)}`;
+    console.log('id:', id);
     console.log('post URL:', POST_URL);
   }
+
+
 }
