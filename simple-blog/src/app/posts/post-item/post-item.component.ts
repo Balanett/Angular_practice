@@ -15,7 +15,8 @@ import { Post } from '../../app.component';
 })
 export class PostItemComponent implements OnInit {
 
-  @Input() post: Post | undefined;
+  @Input()
+  post: Post | undefined;
   imgLink = 'https://picsum.photos/400/200';
 
   constructor() { }

@@ -29,9 +29,5 @@ export class BlogComponent implements OnInit {
     this.postsService.getPosts().subscribe(posts => {
       this.posts = posts;
     });
-
-    this.postsService.getPost(12).subscribe(posts => {
-      console.log('getPost by id (12):', posts);
-    });
   }
 }
