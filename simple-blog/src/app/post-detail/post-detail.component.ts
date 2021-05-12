@@ -6,7 +6,17 @@ import {Post} from '../app.component';
 @Component({
   selector: 'app-post-detail',
   template: `
-    <h1> {{article?.title}} </h1>
+    <div class="grid-container">
+      <div></div>
+      <mat-card>
+        <div class="flex-container">
+          <h1> {{article?.title}} </h1>
+          <a [routerLink]="['']" routerLinkActive="active"> Back </a>
+        </div>
+        <h3> Author: {{article?.userId}} </h3>
+        <p> {{article?.body}} </p>
+      </mat-card>
+    </div>
   `,
   styleUrls: ['./post-detail.component.css']
 })

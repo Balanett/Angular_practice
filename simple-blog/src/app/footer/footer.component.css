@@ -1,0 +1,19 @@
+.flex-container {
+  display: flex;
+  bottom: 0;
+  position: fixed;
+  justify-content: center;
+  width: 100%;
+  background: #C2185B;
+}
+
+a {
+  margin: 20px;
+  color: white;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

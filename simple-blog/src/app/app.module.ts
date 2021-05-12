@@ -10,6 +10,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { PostDetailComponent } from './post-detail/post-detail.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import {MatCardModule} from '@angular/material/card';
+import { FooterComponent } from './footer/footer.component';
+import { PageComponent } from './page/page.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +20,9 @@ import {MatCardModule} from '@angular/material/card';
     HeaderComponent,
     PostDetailComponent,
     NotFoundComponent,
+    FooterComponent,
+    PageComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,

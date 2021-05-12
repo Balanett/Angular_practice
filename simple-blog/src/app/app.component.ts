@@ -13,6 +13,7 @@ export interface Post {
   template: `
     <app-header></app-header>
     <router-outlet></router-outlet>
+    <app-footer></app-footer>
   `,
   styleUrls: ['app.component.css']
 })
