@@ -14,6 +14,7 @@ import {PostsService} from '../../posts.service';
       <ng-template #unsuccessTpl >Error message: No items.</ng-template>
 
       <div class = 'grid-container' *ngIf="posts?.length then successTpl; else unsuccessTpl"> </div>
+      <div class="space"></div>
     </div>
   `,
   styleUrls: ['blog.component.css']
