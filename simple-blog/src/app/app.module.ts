@@ -13,6 +13,7 @@ import {MatCardModule} from '@angular/material/card';
 import { FooterComponent } from './footer/footer.component';
 import { PageComponent } from './page/page.component';
 import { ContactComponent } from './contact/contact.component';
+import {PostRoutingModule} from "./posts/post-routing.module";
 
 @NgModule({
   declarations: [
@@ -24,14 +25,15 @@ import { ContactComponent } from './contact/contact.component';
     PageComponent,
     ContactComponent,
   ],
-  imports: [
-    BrowserModule,
-    MatToolbarModule,
-    PostsModule,
-    HttpClientModule,
-    AppRoutingModule,
-    MatCardModule
-  ],
+    imports: [
+        BrowserModule,
+        MatToolbarModule,
+        PostsModule,
+        HttpClientModule,
+        AppRoutingModule,
+        MatCardModule,
+        PostRoutingModule
+    ],
   providers: [PostsService],
   bootstrap: [AppComponent]
 })
